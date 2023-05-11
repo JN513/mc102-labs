@@ -1,8 +1,5 @@
 def padronizar_vetores(
-    vetor1: list[int],
-    vetor2: list[int],
-    compesador: int = 0,
-    divisao: bool = False
+    vetor1: list[int], vetor2: list[int], compesador: int = 0, divisao: bool = False
 ) -> tuple[list[int], list[int]]:
     """
     Função responsavel por padronizar dois vetores de tamanho distintos
@@ -14,22 +11,21 @@ def padronizar_vetores(
     if len(vetor1) > len(vetor2):
         # Se o vetor 1 for o maior extende o segundo com a
         # quantidade de casas da diferença
-        vetor2.extend([
-            compesador for _ in range(len(vetor1) - len(vetor2))
-        ])
+        vetor2.extend([compesador for _ in range(len(vetor1) - len(vetor2))])
     elif len(vetor1) < len(vetor2):
         # Se o vetor 2 for o maior extende o segundo com a
         # quantidade de casas da diferença
         vetor1.extend(
-            [abs(compesador - divisao)  # transforma 0 em 1 e 1 em 0
-             for _ in range(len(vetor2) - len(vetor1))]
+            [
+                abs(compesador - divisao)  # transforma 0 em 1 e 1 em 0
+                for _ in range(len(vetor2) - len(vetor1))
+            ]
         )
 
     return vetor1, vetor2
 
 
-def soma_vetores(vetor1: list[int], vetor2: list[int], escalar: int = 1) \
-        -> list[int]:
+def soma_vetores(vetor1: list[int], vetor2: list[int], escalar: int = 1) -> list[int]:
     """
     Função responsavel por realizar a soma de dois vetores, o parametro escalar
     e o escalar por qual os elementos do segundo vetor serão multiplicados
@@ -65,8 +61,7 @@ def divide_vetores(vetor1: list[int], vetor2: list[int]) -> list[int]:
     Divide 2 vetores. retorna um unico vetor onde cada posição e a divisão
     dos dois valores de mesma posição nos vetores recebidos
     """
-    vetor1, vetor2 = padronizar_vetores(
-        vetor1, vetor2, compesador=1, divisao=True)
+    vetor1, vetor2 = padronizar_vetores(vetor1, vetor2, compesador=1, divisao=True)
 
     return [vetor1[i] // vetor2[i] for i in range(len(vetor1))]
 
