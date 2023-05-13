@@ -1,7 +1,4 @@
-def search_index(linha: str, element: str) -> int:
-    if len(element) == 1:
-        return linha.index(element)
-
+def search_index(linha: str, element: str) -> int: 
     vogais = ("a", "e", "i", "o", "u")
 
     if element == "vogal":
@@ -15,11 +12,12 @@ def search_index(linha: str, element: str) -> int:
                 or (ord(linha[i]) >= 97 and ord(linha[i]) <= 122)
             ):
                 return i
-    else:
+    elif len(element) > 1:
         for i in range(len(linha)):
             if ord(linha[i]) >= 48 and ord(linha[i]) <= 57:
                 return i
 
+    return linha.index(element)
 
 def main() -> None:
     operador: str = input()
@@ -55,11 +53,7 @@ def main() -> None:
         result: str = ""
 
         for i in range(len(linhas[j])):
-            result += (
-                chr(ord(linhas[j][i]) + key)
-                if ord(linhas[j][i]) + key < 127
-                else chr((ord(linhas[j][i]) + key) % 95)
-            )
+            result += chr(32 + (ord(linhas[j][i]) - 32 + key) % 95)
 
         print(result)
 
