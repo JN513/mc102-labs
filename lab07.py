@@ -33,7 +33,6 @@ def main() -> None:
         linhas.append(input())
         linha += linhas[-1]
 
-    # print(linha)
 
     pos1: int = search_index(linha, operando1)
     pos2: int = search_index(linha[pos1:], operando2) + pos1
