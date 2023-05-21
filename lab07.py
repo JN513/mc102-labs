@@ -1,4 +1,4 @@
-def search_index(linha: str, element: str) -> int: 
+def search_index(linha: str, element: str) -> int:
     vogais = ("a", "e", "i", "o", "u")
 
     if element == "vogal":
@@ -7,9 +7,8 @@ def search_index(linha: str, element: str) -> int:
                 return i
     elif element == "consoante":
         for i in range(len(linha)):
-            if (
-                (ord(linha[i]) >= 65 and ord(linha[i]) <= 90)
-                or (ord(linha[i]) >= 97 and ord(linha[i]) <= 122)
+            if (ord(linha[i]) >= 65 and ord(linha[i]) <= 90) or (
+                ord(linha[i]) >= 97 and ord(linha[i]) <= 122
             ):
                 return i
     elif len(element) > 1:
@@ -18,6 +17,7 @@ def search_index(linha: str, element: str) -> int:
                 return i
 
     return linha.index(element)
+
 
 def main() -> None:
     operador: str = input()
@@ -32,7 +32,6 @@ def main() -> None:
     for _ in range(n_linhas):
         linhas.append(input())
         linha += linhas[-1]
-
 
     pos1: int = search_index(linha, operando1)
     pos2: int = search_index(linha[pos1:], operando2) + pos1

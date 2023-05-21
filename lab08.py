@@ -49,37 +49,39 @@ def main() -> None:
 
         if avaliacao[-3].strip() in filmes[avaliacao[-2].strip()].keys():
             filmes[avaliacao[-2].strip()][avaliacao[-3].strip()] = [
-                filmes[avaliacao[-2].strip()]
-                [avaliacao[-3].strip()][0] +
-                int(avaliacao[-1]),
-                filmes[avaliacao[-2].strip()]
-                [avaliacao[-3].strip()][1] + 1
+                filmes[avaliacao[-2].strip()][avaliacao[-3].strip()][0]
+                + int(avaliacao[-1]),
+                filmes[avaliacao[-2].strip()][avaliacao[-3].strip()][1] + 1,
             ]
         else:
-            filmes[avaliacao[-2].strip()][avaliacao[-3].strip()
-                                          ] = [int(avaliacao[-1]), 1]
+            filmes[avaliacao[-2].strip()][avaliacao[-3].strip()] = [
+                int(avaliacao[-1]),
+                1,
+            ]
 
         if not avaliacao[-3].strip() in filmes_categoria.keys():
             filmes_categoria[avaliacao[-3].strip()] = {
                 "filmes": {avaliacao[-2].strip()},
-                "vencedor": ""
+                "vencedor": "",
             }
         else:
-            filmes_categoria[avaliacao[-3].strip()
-                             ]["filmes"].add(avaliacao[-2].strip())
+            filmes_categoria[avaliacao[-3].strip()]["filmes"].add(avaliacao[-2].strip())
 
     for i in filmes_categoria.keys():
         values: list[dict[str, any]] = [
-            {"nome": key, "pont":
-             filmes[key][i][0] / filmes[key][i][1],
-             "qtd": filmes[key][i][1]}
+            {
+                "nome": key,
+                "pont": filmes[key][i][0] / filmes[key][i][1],
+                "qtd": filmes[key][i][1],
+            }
             for key in filmes_categoria[i]["filmes"]
         ]
 
         values = sorted(values, key=sorted_param)
 
-        filmes[values[0]["nome"]]["vitorias"] = \
+        filmes[values[0]["nome"]]["vitorias"] = (
             filmes[values[0]["nome"]]["vitorias"] + 1
+        )
         filmes_categoria[i]["vencedor"] = values[0]["nome"]
 
     for filme in filmes:
@@ -87,21 +89,24 @@ def main() -> None:
 
         for categoria in filmes[filme]:
             if categoria != "vitorias" and categoria != "total_points":
-                points += filmes[filme][categoria][0] / \
-                    filmes[filme][categoria][1]
+                points += filmes[filme][categoria][0] / filmes[filme][categoria][1]
 
         filmes[filme]["total_points"] = points
 
     values = [
-        {"nome": filme, "pont": filmes[filme]["total_points"],
-            "vitorias": filmes[filme]["vitorias"]}
+        {
+            "nome": filme,
+            "pont": filmes[filme]["total_points"],
+            "vitorias": filmes[filme]["vitorias"],
+        }
         for filme in filmes
     ]
 
     values = sorted(values, key=sort_filmes)
 
     filmes_zerados: list[str] = [
-        filme for filme in filmes if filmes[filme]["total_points"] == 0]
+        filme for filme in filmes if filmes[filme]["total_points"] == 0
+    ]
 
     filmes_categoria = dict(sorted(filmes_categoria.items()))
 
@@ -119,7 +124,8 @@ def main() -> None:
         f"categoria: {dict_filme_keys[0]}\n- "
         f"{filmes_categoria[dict_filme_keys[0]]['vencedor']}\n\n"
         f"categorias especiais\nprêmio pior filme do ano\n- "
-        f"{values[0]['nome']}\nprêmio não merecia estar aqui\n- ", end=""
+        f"{values[0]['nome']}\nprêmio não merecia estar aqui\n- ",
+        end="",
     )
 
     if len(filmes_zerados):
