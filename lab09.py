@@ -38,73 +38,47 @@ def print_matriz() -> None:
     print()
 
 
-def check(y: int, x: int, interator=0) -> tuple[int, int]:
+def check(y: int, x: int, interator: int = 0) -> tuple[int, int]:
     global matriz
     global nexts_positions
+    a: int = y
+    b: int = x
 
     matriz[y][x] = "."
-    print(f"xy _ {x} {y}")
-
-    queue: list[tuple] = list()
 
     for i in range(4):
         dir_xi = x + direction_x[i]
         dir_yi = y + direction_y[i]
 
-        # print(f"xy {dir_yi} - {dir_xi}")
-
         if not verifica_pos(dir_yi, dir_xi):
             continue
 
         if matriz[dir_yi][dir_xi] == "o":
-            if (is_next_position(y, x, dir_yi, dir_xi)) and nexts_positions == interator:
+            if (
+                is_next_position(y, x, dir_yi, dir_xi)
+            ) and nexts_positions == interator:
                 nexts_positions += 1
-            queue.append((dir_yi, dir_xi))
 
-    a: int = y
-    b: int = x
+            matriz[dir_yi][dir_xi] = "r"
+            print_matriz()
 
-    while len(queue) > 0:
-        print(f"ab - {a} {b}, {queue} ")
+            matriz[dir_yi][dir_xi] = "."
+            a, b = check(dir_yi, dir_xi, interator=interator + 1)
 
-        if matriz[queue[0][0]][queue[0][1]] == ".":
-            queue.pop(0)
-            continue
-
-        a, b = queue.pop(0)
-
-        matriz[a][b] = "r"
-        print(f"ab - {a} {b}, {queue} ")
-        print_matriz()
-
-        matriz[a][b] = "."
-
-        v, w = check(a, b, interator=interator + 1)
-
-        print(f"vw - {v} {w}, ab - {a} {b}, {queue} ")
-
-        if (a, b) != (v, w):
-            print(f"vw - {v} {w}, ab - {a} {b}, {queue} {len(queue)}")
-            a, b = v, w
-        else:
-            print("clear queue")
-            queue.clear()
-            print(f"len: {len(queue)}")
-
-        # a, b = v, w
+            return a, b
 
     return a, b
 
 
 def voltar(y: int, x: int, a: int, b: int) -> None:
     global matriz
-    # print("voltar")
     voltas: int = 1
 
-    for _ in range(voltas):
+    i = 0
 
+    while i < voltas:
+        i += 1
         if b > x:
-            # print("fdp")
             while b > x:
                 matriz[a][b] = "."
 
@@ -117,12 +91,10 @@ def voltar(y: int, x: int, a: int, b: int) -> None:
                 k, d = check(a, b)
 
                 if (k, d) != (a, b):
-                    # y, x = k, d
                     a, b = k, d
                     voltas += 1
-                    continue
+                    break
         elif b < x:
-            # print("eu")
             while b < x:
                 matriz[a][b] = "."
 
@@ -135,10 +107,12 @@ def voltar(y: int, x: int, a: int, b: int) -> None:
                 k, d = check(a, b)
 
                 if (k, d) != (a, b):
-                    # y, x = k, d
                     a, b = k, d
                     voltas += 1
-                    continue
+                    break
+
+        if voltas > i:
+            continue
 
         while a > y:
             matriz[a][b] = "."
@@ -152,13 +126,12 @@ def voltar(y: int, x: int, a: int, b: int) -> None:
             k, d = check(a, b)
 
             if (k, d) != (a, b):
-                # y, x = k, d
                 a, b = k, d
                 voltas += 1
-                continue
+                break
 
 
-def varredura_horizontal(i: int, truncate: bool = False) -> bool:
+def varredura_horizontal(i: int, truncate: bool = False) -> None:
     global matriz
     global nexts_positions
 
@@ -193,21 +166,16 @@ def varredura_horizontal(i: int, truncate: bool = False) -> bool:
 
         a, b = check(i, j)
 
-        print(f"{a} {b} - {i} {j} - {nexts_positions}")
-
         if (a != i or b != j) and not is_next_position(i, j, a, b):
             if nexts_positions:
                 v, w = i, j
                 for _ in range(nexts_positions):
                     v, w = get_next_positon(v, w)
-                    # print(f"v,w {v} {w} - {i} { j}")
-                    matriz[v][w] = "."
-                print(f"voltar v,w {v} {w} - {i} { j} - {a} {b}")
 
+                    matriz[v][w] = "."
                 voltar(v, w, a, b)
                 matriz[v][w] = "."
             else:
-                print(f"voltar v,w {i} { j} - {a} {b}")
                 voltar(i, j, a, b)
                 matriz[i][j] = "."
 
