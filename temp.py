@@ -2,7 +2,7 @@ direction_x = [-1, 0, 1, 0]
 direction_y = [0, -1, 0, 1]
 matriz: list[list[str]]
 
-nexts_positions: int = 0
+nexts_positions: list[bool] = []
 
 
 def verifica_pos(y: int, x: int) -> bool:
@@ -40,10 +40,8 @@ def print_matriz() -> None:
 
 def check(y: int, x: int, interator=0) -> tuple[int, int]:
     global matriz
-    global nexts_positions
 
     matriz[y][x] = "."
-    print(f"xy _ {x} {y}")
 
     queue: list[tuple] = list()
 
@@ -57,16 +55,16 @@ def check(y: int, x: int, interator=0) -> tuple[int, int]:
             continue
 
         if matriz[dir_yi][dir_xi] == "o":
-            if (is_next_position(y, x, dir_yi, dir_xi)) and nexts_positions == interator:
-                nexts_positions += 1
+            if (is_next_position(y, x, dir_yi, dir_xi)) and len(
+                nexts_positions
+            ) == interator:
+                nexts_positions.append(True)
             queue.append((dir_yi, dir_xi))
 
     a: int = y
     b: int = x
 
     while len(queue) > 0:
-        print(f"ab - {a} {b}, {queue} ")
-
         if matriz[queue[0][0]][queue[0][1]] == ".":
             queue.pop(0)
             continue
@@ -74,37 +72,25 @@ def check(y: int, x: int, interator=0) -> tuple[int, int]:
         a, b = queue.pop(0)
 
         matriz[a][b] = "r"
-        print(f"ab - {a} {b}, {queue} ")
+
         print_matriz()
 
         matriz[a][b] = "."
 
-        v, w = check(a, b, interator=interator + 1)
-
-        print(f"vw - {v} {w}, ab - {a} {b}, {queue} ")
-
-        if (a, b) != (v, w):
-            print(f"vw - {v} {w}, ab - {a} {b}, {queue} {len(queue)}")
-            a, b = v, w
-        else:
-            print("clear queue")
-            queue.clear()
-            print(f"len: {len(queue)}")
-
-        # a, b = v, w
+        a, b = check(a, b, interator=interator + 1)
 
     return a, b
 
 
 def voltar(y: int, x: int, a: int, b: int) -> None:
     global matriz
-    # print("voltar")
+
     voltas: int = 1
+    # print("voltar")
 
     for _ in range(voltas):
 
-        if b > x:
-            # print("fdp")
+        if b > y:
             while b > x:
                 matriz[a][b] = "."
 
@@ -117,12 +103,10 @@ def voltar(y: int, x: int, a: int, b: int) -> None:
                 k, d = check(a, b)
 
                 if (k, d) != (a, b):
-                    # y, x = k, d
-                    a, b = k, d
+                    y, x = k, d
                     voltas += 1
                     continue
-        elif b < x:
-            # print("eu")
+        elif b < y:
             while b < x:
                 matriz[a][b] = "."
 
@@ -135,8 +119,7 @@ def voltar(y: int, x: int, a: int, b: int) -> None:
                 k, d = check(a, b)
 
                 if (k, d) != (a, b):
-                    # y, x = k, d
-                    a, b = k, d
+                    y, x = k, d
                     voltas += 1
                     continue
 
@@ -152,15 +135,13 @@ def voltar(y: int, x: int, a: int, b: int) -> None:
             k, d = check(a, b)
 
             if (k, d) != (a, b):
-                # y, x = k, d
-                a, b = k, d
+                y, x = k, d
                 voltas += 1
                 continue
 
 
 def varredura_horizontal(i: int, truncate: bool = False) -> bool:
     global matriz
-    global nexts_positions
 
     start = 0
     end = len(matriz[0])
@@ -178,8 +159,8 @@ def varredura_horizontal(i: int, truncate: bool = False) -> bool:
         start, end = end - 1, start - 1
 
     for j in range(start, end, passo):
-        if nexts_positions:
-            nexts_positions -= 1
+        if len(nexts_positions):
+            nexts_positions.pop()
             continue
 
         matriz[lastx][lasty] = "."
@@ -193,21 +174,16 @@ def varredura_horizontal(i: int, truncate: bool = False) -> bool:
 
         a, b = check(i, j)
 
-        print(f"{a} {b} - {i} {j} - {nexts_positions}")
-
         if (a != i or b != j) and not is_next_position(i, j, a, b):
-            if nexts_positions:
+            if len(nexts_positions):
                 v, w = i, j
-                for _ in range(nexts_positions):
+                for _ in nexts_positions:
                     v, w = get_next_positon(v, w)
                     # print(f"v,w {v} {w} - {i} { j}")
                     matriz[v][w] = "."
-                print(f"voltar v,w {v} {w} - {i} { j} - {a} {b}")
-
                 voltar(v, w, a, b)
                 matriz[v][w] = "."
             else:
-                print(f"voltar v,w {i} { j} - {a} {b}")
                 voltar(i, j, a, b)
                 matriz[i][j] = "."
 
