@@ -1,0 +1,20 @@
+ATCGTAGTG
+mostrar
+buscar_bidirecional TG
+reverter 0 7
+mostrar
+buscar_bidirecional TG
+reverter 0 2
+mostrar
+buscar_bidirecional AG
+reverter 7 7
+mostrar
+buscar AG
+reverter 7 8
+mostrar
+buscar AG
+reverter 0 8
+mostrar
+buscar AG
+buscar_bidirecional AG
+sair

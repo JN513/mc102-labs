@@ -1,0 +1,36 @@
+2564
+confusão 7 fogo 20 gelo 17 normal 15 perfurante 6 veneno 29
+3
+1
+300 35 3
+chifres de broca, perfurante, 180, 0, 20
+corpo, nenhuma, 150, 0, 8
+recipiente de congelamento, gelo, 100, -30, 5
+0, recipiente de congelamento, gelo, 22, -14
+0, corpo, veneno, -39, 0
+0, chifres de broca, perfurante, 5, 14
+0, recipiente de congelamento, gelo, -42, 43
+0, recipiente de congelamento, gelo, 39, -16
+1
+120 25 2
+corpo, nenhuma, 120, 0, 10
+recipiente de chamas, fogo, 180, -5, 1
+0, recipiente de chamas, fogo, 50, 32
+0, recipiente de chamas, fogo, -9, -35
+1
+800 84 5
+corpo, nenhuma, 200, 0, 15
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+0, gerador de energia, veneno, 11, -4
+0, escudo garra, perfurante, 18, -23
+0, pistola de raios, perfurante, -32, 46
+0, porta-caixa, gelo, 22, -9
+0, escudo garra, perfurante, 48, 5
+0, corpo, veneno, 4, -40
+0, corpo, veneno, -22, -43
+0, gerador de energia, veneno, -40, 11
+0, gerador de energia, confusão, -32, 7
+0, escudo garra, perfurante, 9, 39

@@ -1,0 +1,9 @@
+CGCGTATGC
+mostrar
+remover 0 8
+mostrar
+buscar TA
+combinar TATATGC 0
+mostrar
+buscar TATATGC
+sair

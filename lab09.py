@@ -66,8 +66,7 @@ def is_next_position(y: int, x: int, a: int, b: int) -> bool:
 
 
 def print_matriz() -> None:
-    """Função responsavel por printar a matriz
-    """
+    """Função responsavel por printar a matriz"""
     global matriz
 
     for linha in matriz:
@@ -294,8 +293,7 @@ def varredura_horizontal(i: int, truncate: bool = False) -> None:
 
 
 def varredura() -> None:
-    """Função responsavel por realizar a varredura
-    """
+    """Função responsavel por realizar a varredura"""
     global matriz
 
     # Verifico todas as linhas

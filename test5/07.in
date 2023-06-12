@@ -1,0 +1,7 @@
+CGCGTATGC
+mostrar
+remover 2 4
+mostrar
+buscar CG
+buscar_bidirecional CG
+sair

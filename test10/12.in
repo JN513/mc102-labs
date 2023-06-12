@@ -1,0 +1,69 @@
+8496
+confusão 6 fogo 5 gelo 8 normal 5 perfurante 4 veneno 8
+11
+2
+120 25 2
+corpo, nenhuma, 120, 0, 10
+recipiente de chamas, fogo, 180, -5, 1
+120 25 2
+corpo, nenhuma, 120, 0, 10
+recipiente de chamas, fogo, 180, -5, 1
+0, recipiente de chamas, fogo, 18, 5
+1, corpo, perfurante, 15, -18
+1, corpo, fogo, -46, 8
+1, corpo, confusão, 9, 17
+2
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+1000 90 11
+barras de resfriamento, todas, 50, -18, 5
+corpo, fogo, 100, 0, 50
+estabilizador, todas, 50, -25, 10
+lança chamas, todas, 50, 5, 5
+lança granadas, todas, 50, -5, 5
+lançador de enxame, todas, 100, -10, 10
+núcleo, todas, 200, 50, 30
+saídas de calor, todas, 100, 0, 20
+torre de canhão repetidora, todas, 50, 10, 50
+torreta de armas, perfurante, 50, 10, 10
+torreta de canhão, todas, 100, -40, 35
+1, lança granadas, normal, 23, 17
+0, corpo, gelo, 26, 33
+1, lançador de enxame, normal, 6, -40
+1, lança chamas, confusão, 18, 7
+0, sparker, perfurante, -16, 9
+1, torreta de canhão, confusão, -38, 43
+0, sparker, perfurante, -46, -28
+1, torre de canhão repetidora, confusão, -14, -39
+1, corpo, fogo, 24, -49
+0, corpo, gelo, 46, 45
+1, estabilizador, confusão, -9, 39
+0, bolsa de fogo, fogo, 45, 46
+1, corpo, fogo, -42, -4
+1, torreta de canhão, fogo, 2, -17
+0, sparker, perfurante, -1, 43
+0, corpo, gelo, -3, -11
+0, bolsa de explosivos, perfurante, 40, 27
+1, núcleo, fogo, -2, 11
+0, sparker, veneno, -13, -19
+0, corpo, gelo, -7, -19
+0, unidade de fogo, veneno, 1, 48
+0, unidade de fogo, gelo, 16, -20
+0, bolsa de explosivos, veneno, 2, 15
+0, corpo, gelo, -3, 35
+0, corpo, gelo, -5, 14
+0, bolsa de explosivos, gelo, 26, -16
+0, sparker, veneno, -17, -35
+0, unidade de fogo, veneno, -26, -50
+0, corpo, normal, 48, 10
+0, unidade de fogo, confusão, 0, 20
+0, bolsa de explosivos, veneno, 18, 8
+0, sparker, normal, -39, 7
+0, bolsa de explosivos, confusão, -12, 18
+0, unidade de fogo, veneno, -31, 31
+0, unidade de fogo, veneno, 43, 11
+0, bolsa de fogo, normal, 36, -16

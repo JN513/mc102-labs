@@ -1,0 +1,55 @@
+559
+confusão 15 fogo 6 gelo 23 normal 10 perfurante 9 veneno 16
+17
+3
+120 25 2
+corpo, nenhuma, 120, 0, 10
+recipiente de chamas, fogo, 180, -5, 1
+90 5 2
+corpo, nenhuma, 90, 0, 0
+olho, todas, 180, 0, 10
+800 84 5
+corpo, nenhuma, 200, 0, 15
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+0, recipiente de chamas, fogo, -9, -3
+2, gerador de energia, normal, -26, 39
+2, escudo garra, perfurante, -39, 13
+2, escudo garra, perfurante, -13, 5
+2, corpo, veneno, -2, 16
+2, gerador de energia, normal, 39, 50
+2, porta-caixa, veneno, 12, 29
+1, olho, perfurante, -33, -32
+3
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+800 84 5
+corpo, nenhuma, 200, 0, 15
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+1000 90 11
+barras de resfriamento, todas, 50, -18, 5
+corpo, fogo, 100, 0, 50
+estabilizador, todas, 50, -25, 10
+lança chamas, todas, 50, 5, 5
+lança granadas, todas, 50, -5, 5
+lançador de enxame, todas, 100, -10, 10
+núcleo, todas, 200, 50, 30
+saídas de calor, todas, 100, 0, 20
+torre de canhão repetidora, todas, 50, 10, 50
+torreta de armas, perfurante, 50, 10, 10
+torreta de canhão, todas, 100, -40, 35
+0, bolsa de explosivos, normal, -22, -22
+1, gerador de energia, normal, 33, -45
+2, torreta de canhão, fogo, -25, -41
+1, gerador de energia, gelo, -12, -18
+2, saídas de calor, normal, -28, 11
+2, torre de canhão repetidora, confusão, -19, 24

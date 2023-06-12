@@ -1,0 +1,16 @@
+500
+confusão 20 fogo 10 gelo 15 normal 50 perfurante 20 veneno 15
+1
+1
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+0, corpo, gelo, 9, 1
+0, corpo, gelo, 40, -40
+0, corpo, gelo, 1, -15
+0, sparker, perfurante, -41, -35
+0, unidade de fogo, normal, 40, 32
+0, corpo, gelo, 47, 1

@@ -1,0 +1,55 @@
+760
+confusão 33 fogo 33 gelo 44 normal 5 perfurante 40 veneno 17
+17
+8
+90 5 2
+corpo, nenhuma, 90, 0, 0
+olho, todas, 180, 0, 10
+300 35 3
+chifres de broca, perfurante, 180, 0, 20
+corpo, nenhuma, 150, 0, 8
+recipiente de congelamento, gelo, 100, -30, 5
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+800 84 5
+corpo, nenhuma, 200, 0, 15
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+1000 90 11
+barras de resfriamento, todas, 50, -18, 5
+corpo, fogo, 100, 0, 50
+estabilizador, todas, 50, -25, 10
+lança chamas, todas, 50, 5, 5
+lança granadas, todas, 50, -5, 5
+lançador de enxame, todas, 100, -10, 10
+núcleo, todas, 200, 50, 30
+saídas de calor, todas, 100, 0, 20
+torre de canhão repetidora, todas, 50, 10, 50
+torreta de armas, perfurante, 50, 10, 10
+torreta de canhão, todas, 100, -40, 35
+300 35 3
+chifres de broca, perfurante, 180, 0, 20
+corpo, nenhuma, 150, 0, 8
+recipiente de congelamento, gelo, 100, -30, 5
+300 35 3
+chifres de broca, perfurante, 180, 0, 20
+corpo, nenhuma, 150, 0, 8
+recipiente de congelamento, gelo, 100, -30, 5
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+5, chifres de broca, perfurante, -9, -31
+4, lança granadas, gelo, -36, -32
+5, corpo, fogo, -20, -30
+6, corpo, fogo, 4, -45
+1, recipiente de congelamento, gelo, 27, 10
+6, recipiente de congelamento, gelo, -32, -27

@@ -1,0 +1,16 @@
+CTGGTCA
+mostrar
+buscar GTC
+buscar_bidirecional GTC
+transpor 0 1 3
+mostrar
+buscar GTC
+buscar_bidirecional GTC
+transpor 0 3 6
+mostrar
+buscar TC
+buscar_bidirecional TC
+transpor 1 4 5
+mostrar
+buscar CCAGGT
+sair

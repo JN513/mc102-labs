@@ -1,5 +1,4 @@
 env/
-test*
 .mypy_cache
 sfout/
 x*

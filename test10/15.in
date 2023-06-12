@@ -1,0 +1,86 @@
+9894
+confusão 23 fogo 24 gelo 23 normal 13 perfurante 24 veneno 19
+18
+5
+120 25 2
+corpo, nenhuma, 120, 0, 10
+recipiente de chamas, fogo, 180, -5, 1
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+300 35 3
+chifres de broca, perfurante, 180, 0, 20
+corpo, nenhuma, 150, 0, 8
+recipiente de congelamento, gelo, 100, -30, 5
+90 5 2
+corpo, nenhuma, 90, 0, 0
+olho, todas, 180, 0, 10
+3, chifres de broca, perfurante, -20, 39
+4, corpo, gelo, -9, 31
+4, corpo, fogo, -17, -31
+3, corpo, fogo, 31, -42
+2, corpo, gelo, -9, 23
+3, chifres de broca, perfurante, -1, -44
+4, corpo, gelo, 20, -43
+4, olho, perfurante, -33, 0
+2, corpo, gelo, 33, 33
+0, recipiente de chamas, fogo, 47, 20
+3, chifres de broca, perfurante, -9, 40
+0, recipiente de chamas, fogo, -34, 49
+2, bolsa de explosivos, veneno, -42, -38
+1, unidade de fogo, fogo, 18, -24
+2, sparker, perfurante, 37, 46
+1, sparker, perfurante, -18, -49
+2, unidade de fogo, normal, -17, 17
+1, sparker, perfurante, -43, 34
+2, sparker, perfurante, -44, -31
+1, unidade de fogo, fogo, -1, -44
+1, sparker, perfurante, 36, 40
+1, sparker, perfurante, -36, -38
+1, bolsa de fogo, gelo, -17, 16
+1, corpo, gelo, 46, -40
+2, bolsa de fogo, fogo, 21, 29
+2, bolsa de fogo, perfurante, 3, 14
+1, unidade de fogo, fogo, 38, 27
+2, bolsa de fogo, confusão, 13, 29
+2, unidade de fogo, confusão, 7, -40
+2, unidade de fogo, veneno, -45, -11
+1, bolsa de fogo, fogo, -39, 16
+1, corpo, gelo, -36, 10
+2, unidade de fogo, fogo, -27, 36
+2, sparker, perfurante, -2, -44
+1, bolsa de explosivos, gelo, 18, -1
+1, unidade de fogo, gelo, -13, -24
+2, bolsa de fogo, veneno, -3, -50
+1, corpo, gelo, -7, 16
+2, bolsa de fogo, perfurante, -18, -19
+1, bolsa de fogo, perfurante, -7, -31
+2, corpo, gelo, -2, 34
+2, sparker, perfurante, 25, -11
+2, unidade de fogo, fogo, 32, -25
+1, bolsa de fogo, veneno, 34, 3
+1, bolsa de explosivos, perfurante, -31, -39
+2, sparker, perfurante, -49, 4
+1, sparker, perfurante, 13, -47
+2, sparker, perfurante, 30, 31
+2, bolsa de explosivos, fogo, -14, 29
+2, unidade de fogo, fogo, 46, -42
+2, corpo, gelo, 44, -16
+2, bolsa de fogo, normal, -22, -36
+2, bolsa de fogo, confusão, 23, -10
+1, sparker, perfurante, 17, 38
+2, bolsa de explosivos, normal, 5, -34
+1, sparker, perfurante, 18, -11
+2, sparker, perfurante, 15, 11
+1, bolsa de explosivos, perfurante, 48, 36
+1, bolsa de explosivos, gelo, 38, 32
+2, unidade de fogo, perfurante, -48, 16

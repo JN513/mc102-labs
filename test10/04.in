@@ -1,0 +1,16 @@
+500
+confusão 20 fogo 10 gelo 15 normal 50 perfurante 20 veneno 15
+2
+1
+90 5 2
+corpo, nenhuma, 50, 0, 0
+olho, todas, 180, 0, 10
+0, olho, perfurante, 0, 10
+1
+90 5 2
+corpo, nenhuma, 50, 0, 0
+olho, todas, 180, 0, 10
+0, corpo, normal, 0, 0
+0, corpo, normal, 0, 0
+0, corpo, normal, 0, 0
+0, olho, perfurante, 0, 0

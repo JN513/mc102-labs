@@ -1,0 +1,8 @@
+TCGGAGTGGAGTCCCCCGAACGGGGCCTTTTACGACAGGATCCGGCTG
+remover 1 23
+mostrar
+reverter 10 13
+mostrar
+buscar GG
+buscar_bidirecional GG
+sair

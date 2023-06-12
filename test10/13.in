@@ -1,0 +1,81 @@
+10293
+confusão 23 fogo 14 gelo 20 normal 16 perfurante 12 veneno 30
+4
+1
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+0, sparker, perfurante, -38, -17
+0, sparker, perfurante, -14, 14
+0, unidade de fogo, perfurante, 33, -13
+0, corpo, gelo, 47, 40
+0, bolsa de explosivos, normal, -39, 9
+0, unidade de fogo, veneno, -19, -20
+0, bolsa de fogo, normal, -45, 48
+0, bolsa de fogo, veneno, 34, 3
+0, bolsa de fogo, veneno, -43, -47
+0, bolsa de explosivos, confusão, -22, -32
+0, bolsa de fogo, perfurante, -17, 20
+0, sparker, perfurante, 15, -35
+0, sparker, perfurante, -29, 25
+0, sparker, perfurante, -32, 14
+0, corpo, gelo, 36, -31
+0, corpo, gelo, 21, -33
+0, sparker, perfurante, -29, 25
+0, bolsa de fogo, gelo, -24, -38
+0, unidade de fogo, normal, 7, -13
+0, bolsa de explosivos, confusão, 41, -23
+0, corpo, gelo, 28, 43
+0, corpo, gelo, 5, -25
+0, unidade de fogo, normal, -19, 31
+0, sparker, perfurante, 36, 41
+0, bolsa de explosivos, normal, 33, 27
+0, corpo, gelo, 7, -31
+0, bolsa de fogo, perfurante, -48, -3
+0, unidade de fogo, gelo, -39, -5
+0, bolsa de explosivos, fogo, -16, 33
+0, bolsa de fogo, gelo, 42, 37
+0, unidade de fogo, perfurante, -13, -25
+0, bolsa de fogo, normal, 25, 31
+0, corpo, gelo, -50, 34
+0, bolsa de fogo, veneno, -33, -45
+0, corpo, gelo, -44, -2
+0, unidade de fogo, fogo, -24, 10
+0, bolsa de explosivos, veneno, 46, -25
+0, unidade de fogo, confusão, 34, 15
+0, bolsa de fogo, gelo, 18, 43
+0, corpo, gelo, -25, 8
+0, bolsa de explosivos, fogo, 41, -27
+0, corpo, gelo, -10, 43
+1
+120 25 2
+corpo, nenhuma, 120, 0, 10
+recipiente de chamas, fogo, 180, -5, 1
+0, recipiente de chamas, fogo, -31, 2
+1
+300 35 3
+chifres de broca, perfurante, 180, 0, 20
+corpo, nenhuma, 150, 0, 8
+recipiente de congelamento, gelo, 100, -30, 5
+0, corpo, perfurante, -7, -6
+0, corpo, perfurante, 23, -13
+0, chifres de broca, perfurante, -42, 39
+0, chifres de broca, perfurante, -39, -41
+1
+800 84 5
+corpo, nenhuma, 200, 0, 15
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+0, gerador de energia, normal, -33, 33
+0, escudo garra, perfurante, -18, -24
+0, corpo, perfurante, 10, -30
+0, gerador de energia, veneno, 33, 20
+0, porta-caixa, normal, 5, -44
+0, corpo, veneno, 19, 22
+0, pistola de raios, perfurante, -37, -41
+0, porta-caixa, veneno, 16, 5

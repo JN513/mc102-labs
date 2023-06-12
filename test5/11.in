@@ -1,0 +1,7 @@
+CGCGCTAGCGACT
+mostrar
+buscar_bidirecional CGC
+transpor_e_reverter 1 3 6
+mostrar
+buscar_bidirecional CGC
+sair

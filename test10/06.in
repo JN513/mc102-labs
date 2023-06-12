@@ -1,0 +1,28 @@
+6587
+confusão 12 fogo 30 gelo 26 normal 16 perfurante 9 veneno 8
+2
+1
+90 5 2
+corpo, nenhuma, 90, 0, 0
+olho, todas, 180, 0, 10
+0, corpo, veneno, 41, -44
+0, olho, perfurante, 15, 46
+1
+800 84 5
+corpo, nenhuma, 200, 0, 15
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+0, pistola de raios, perfurante, -46, -18
+0, corpo, normal, -13, 40
+0, pistola de raios, perfurante, 43, -46
+0, escudo garra, perfurante, 22, -32
+0, porta-caixa, confusão, 12, -49
+0, pistola de raios, perfurante, -2, 11
+0, gerador de energia, gelo, 6, -26
+0, corpo, fogo, -1, 25
+0, pistola de raios, perfurante, 2, 32
+0, escudo garra, perfurante, 42, 3
+0, escudo garra, perfurante, -6, -16
+0, escudo garra, perfurante, -10, 40

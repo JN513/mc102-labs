@@ -1,0 +1,166 @@
+4832
+confusão 43 fogo 34 gelo 11 normal 14 perfurante 40 veneno 15
+9
+1
+120 25 2
+corpo, nenhuma, 120, 0, 0
+recipiente de chamas, fogo, 180, 0, 10
+0, recipiente de chamas, fogo, -11, -38
+2
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+120 25 2
+corpo, nenhuma, 120, 0, 0
+recipiente de chamas, fogo, 180, 0, 10
+1, corpo, fogo, 24, 32
+1, recipiente de chamas, fogo, 35, -40
+0, corpo, gelo, -21, 13
+0, sparker, perfurante, 18, 33
+0, bolsa de fogo, normal, 44, 30
+0, corpo, gelo, -43, 35
+0, unidade de fogo, fogo, 45, -34
+0, bolsa de fogo, confusão, -19, -40
+0, bolsa de fogo, normal, 28, 28
+0, bolsa de fogo, normal, 3, -9
+0, sparker, perfurante, -37, 37
+0, unidade de fogo, normal, 36, 9
+0, bolsa de explosivos, veneno, -34, -10
+0, bolsa de explosivos, fogo, -24, -31
+0, bolsa de fogo, fogo, -44, 42
+0, sparker, perfurante, 31, 17
+0, bolsa de explosivos, confusão, -32, -34
+0, bolsa de fogo, normal, 14, -19
+0, corpo, gelo, 34, 22
+0, bolsa de fogo, gelo, 18, 9
+0, unidade de fogo, normal, -42, 45
+0, corpo, gelo, 42, 14
+0, unidade de fogo, confusão, 6, 24
+0, bolsa de fogo, confusão, 37, 7
+0, bolsa de fogo, confusão, 28, 14
+0, sparker, perfurante, 40, -21
+0, corpo, gelo, 31, 29
+0, bolsa de fogo, normal, -10, 14
+0, unidade de fogo, fogo, 33, 3
+0, corpo, gelo, 33, 37
+0, bolsa de explosivos, confusão, 28, -3
+0, corpo, gelo, -44, 22
+0, corpo, gelo, -6, 37
+0, corpo, gelo, 0, 40
+0, corpo, gelo, 0, 40
+0, corpo, normal, 0, 40
+3
+300 35 3
+chifres de broca, perfurante, 180, 0, 10
+corpo, nenhuma, 150, 0, 0
+recipiente de congelamento, gelo, 100, -30, 5
+90 5 2
+corpo, nenhuma, 90, 0, 0
+olho, todas, 180, 0, 10
+800 84 5
+corpo, nenhuma, 200, 0, 0
+escudo garra, perfurante, 100, -25, 5
+gerador de energia, todas, 200, 50, 30
+pistola de raios, perfurante, 100, -18, 5
+porta-caixa, todas, 300, 10, 50
+2, pistola de raios, perfurante, -18, 5
+1, corpo, normal, -45, -7
+0, recipiente de congelamento, gelo, -30, 5
+0, corpo, gelo, -13, 18
+0, corpo, gelo, 0, -2
+1, olho, perfurante, 12, -10
+0, corpo, perfurante, 0, -13
+2, porta-caixa, confusão, 10, 50
+2, pistola de raios, perfurante, -18, 5
+2, corpo, perfurante, 0, 0
+2, gerador de energia, fogo, 50, 30
+1
+300 35 3
+chifres de broca, perfurante, 180, 0, 10
+corpo, nenhuma, 150, 0, 0
+recipiente de congelamento, gelo, 100, -30, 5
+0, chifres de broca, perfurante, -1, 13
+0, recipiente de congelamento, gelo, -40, 15
+0, corpo, normal, -4, 31
+1
+1000 90 11
+barras de resfriamento, todas, 50, -18, 5
+corpo, fogo, 100, 0, 0
+estabilizador, todas, 50, -25, 5
+lança chamas, todas, 50, -25, 5
+lança granadas, todas, 50, -25, 5
+lançador de enxame, todas, 100, -25, 5
+núcleo, todas, 200, 50, 30
+saídas de calor, todas, 100, -25, 5
+torre de canhão repetidora, todas, 50, 10, 50
+torreta de armas, perfurante, 50, -25, 5
+torreta de canhão, todas, 100, -25, 5
+0, torreta de canhão, veneno, -29, -3
+0, núcleo, perfurante, 41, 37
+0, torre de canhão repetidora, veneno, -47, 19
+0, corpo, fogo, 0, 0
+0, barras de resfriamento, perfurante, -14, 4
+0, barras de resfriamento, gelo, -18, 1
+0, barras de resfriamento, veneno, -19, 1
+0, lança chamas, gelo, -35, 2
+0, torre de canhão repetidora, normal, 10, 50
+0, lançador de enxame, gelo, -26, 8
+0, lança chamas, gelo, -34, 12
+0, saídas de calor, veneno, -24, 4
+0, saídas de calor, perfurante, -13, 16
+0, corpo, fogo, -4, 11
+0, torre de canhão repetidora, gelo, -33, 38
+0, corpo, fogo, -39, -21
+1
+7500 250 5
+bolsa de explosivos, nenhuma, 300, 0, -10
+bolsa de fogo, todas, 200, -5, -15
+corpo, gelo, 500, 0, 40
+sparker, perfurante, 100, 5, -20
+unidade de fogo, todas, 160, 5, 10
+0, bolsa de fogo, gelo, -30, 32
+0, sparker, perfurante, -7, 0
+0, bolsa de explosivos, gelo, 48, -2
+0, sparker, perfurante, 48, 34
+0, unidade de fogo, normal, -37, -18
+0, bolsa de fogo, normal, 20, -42
+0, bolsa de fogo, fogo, 16, -23
+0, sparker, perfurante, 46, 15
+0, unidade de fogo, perfurante, 0, 43
+0, unidade de fogo, confusão, -16, -26
+0, bolsa de explosivos, veneno, -3, 37
+0, bolsa de explosivos, gelo, 50, -28
+0, corpo, gelo, 46, -9
+0, corpo, gelo, 30, 47
+0, unidade de fogo, fogo, 32, 11
+0, unidade de fogo, veneno, 10, -39
+0, bolsa de fogo, fogo, 1, -29
+0, corpo, gelo, -44, 44
+0, bolsa de fogo, normal, -32, 45
+0, unidade de fogo, fogo, -10, 41
+0, unidade de fogo, perfurante, -2, -27
+0, corpo, gelo, 38, 1
+0, corpo, gelo, 0, -40
+0, bolsa de fogo, veneno, 17, 41
+0, corpo, gelo, 10, 9
+0, sparker, perfurante, 0, -25
+0, bolsa de fogo, veneno, 5, 23
+0, bolsa de explosivos, perfurante, 13, 37
+0, unidade de fogo, veneno, 26, -18
+0, sparker, perfurante, -30, -32
+0, bolsa de explosivos, veneno, 38, 12
+0, bolsa de fogo, perfurante, -33, 39
+0, sparker, perfurante, -38, -26
+0, unidade de fogo, fogo, -41, -11
+0, bolsa de explosivos, perfurante, -3, -44
+0, bolsa de explosivos, veneno, 30, -9
+0, corpo, gelo, 12, 22
+0, bolsa de explosivos, veneno, -3, -40
+0, unidade de fogo, fogo, -11, -45
+0, sparker, perfurante, 3, -3
+0, bolsa de fogo, veneno, -2, -18
+0, bolsa de explosivos, normal, 7, -7
+0, corpo, gelo, 1, 41

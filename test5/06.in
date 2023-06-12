@@ -1,0 +1,12 @@
+ATGCGT
+mostrar
+combinar CTAG 3
+mostrar
+buscar TGC
+buscar_bidirecional CGT
+buscar ATGCTAGCGT
+remover 2 6
+combinar TTCGG 0
+mostrar
+buscar TTCGGATC
+sair
