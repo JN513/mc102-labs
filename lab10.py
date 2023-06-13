@@ -166,6 +166,93 @@ def get_dano_total() -> int:
     return dano
 
 
+def ler_maquinas(num_maquinas_combate: int) -> None:
+    for i in range(num_maquinas_combate):
+        vida, pts_ataque, num_partes = list(map(int, input().split()))
+
+        maquinas.append(
+            Maquina(pts_vida=vida, pts_ataque=pts_ataque, num_partes=num_partes))
+
+        for _ in range(num_partes):
+            nome_parte, fraqueza, dano_maximo, cx, cy = input().split(",")
+
+            coordenadas: tuple[int, int] = (
+                int(cx.strip()), int(cy.strip()))
+
+            maquinas[i].adicionar_parte_by_object(
+                Parte(
+                    nome=nome_parte.strip(),
+                    fraqueza=fraqueza.strip(),
+                    dano_maximo=int(dano_maximo.strip()),
+                    coordenadas=coordenadas,
+                )
+            )
+
+
+def combate(aloy: Player) -> dict[int, dict[tuple[int, int], int]]:
+    global maquinas
+    interator: int = 0
+    criticos: dict[int, dict[tuple[int, int], int]] = {}
+
+    while True:
+        interator += 1
+
+        informarcoes_ataque = input().split(",")
+
+        unidade_alvo = int(informarcoes_ataque[0].strip())
+        parte_alvo = informarcoes_ataque[1].strip()
+        flecha_usada = informarcoes_ataque[2].strip()
+        coordenada = (
+            int(informarcoes_ataque[3].strip()),
+            int(informarcoes_ataque[4].strip()),
+        )
+
+        qtd = aloy.usar_flecha(flecha_usada)
+
+        if qtd < 0:
+            aloy.acabou_flecha()
+            break
+
+        dano, foi_critico = maquinas[unidade_alvo].dano(
+            parte_alvo, coordenada, flecha_usada
+        )
+
+        if foi_critico:
+            if unidade_alvo in criticos.keys():
+                if coordenada in criticos[unidade_alvo].keys():
+                    criticos[unidade_alvo][coordenada]["qtd"] += 1
+                else:
+                    criticos[unidade_alvo][coordenada] = {
+                        "qtd": 1,
+                        "parte": parte_alvo,
+                    }
+            else:
+                criticos[unidade_alvo] = {}
+                criticos[unidade_alvo][coordenada] = {
+                    "qtd": 1, "parte": parte_alvo}
+
+        if maquinas[unidade_alvo].pts_vida <= 0:
+            print(f"Máquina {unidade_alvo} derrotada")
+
+        if not tem_maquinas_vivas():
+            break
+
+        if interator % 3 == 0:
+            dano = get_dano_total()
+
+            aloy.pts_vida = max(aloy.pts_vida - dano, 0)
+
+        if aloy.pts_vida <= 0:
+            aloy.morreu()
+            break
+
+        if not aloy.tem_flechas():
+            aloy.acabou_flecha()
+            break
+
+    return criticos
+
+
 def main() -> None:
     global maquinas
     pts_vida: int = int(input())
@@ -180,92 +267,20 @@ def main() -> None:
     while num_maquinas:
         maquinas.clear()
 
-        criticos: dict[int, dict[tuple[int, int], int]] = {}
         # Lendo as maquinas
         num_maquinas_combate: int = int(input())
 
         num_maquinas -= num_maquinas_combate
 
-        for i in range(num_maquinas_combate):
-            v, p, q = list(map(int, input().split()))
-
-            maquinas.append(Maquina(pts_vida=v, pts_ataque=p, num_partes=q))
-
-            for _ in range(q):
-                nome_parte, fraqueza, dano_maximo, cx, cy = input().split(",")
-
-                coordenadas: tuple[int, int] = (
-                    int(cx.strip()), int(cy.strip()))
-
-                maquinas[i].adicionar_parte_by_object(
-                    Parte(
-                        nome=nome_parte.strip(),
-                        fraqueza=fraqueza.strip(),
-                        dano_maximo=int(dano_maximo.strip()),
-                        coordenadas=coordenadas,
-                    )
-                )
+        ler_maquinas(num_maquinas_combate)
 
         # Hora do combate
-
-        interator: int = 0
 
         print(f"Combate {indice}, vida = {aloy.pts_vida}")
 
         indice += 1
 
-        while True:
-            # print("carai")
-            interator += 1
-
-            informarcoes_ataque = input().split(",")
-
-            unidade_alvo = int(informarcoes_ataque[0].strip())
-            parte_alvo = informarcoes_ataque[1].strip()
-            flecha_usada = informarcoes_ataque[2].strip()
-            coordenada = (
-                int(informarcoes_ataque[3].strip()),
-                int(informarcoes_ataque[4].strip()),
-            )
-
-            qtd = aloy.usar_flecha(flecha_usada)
-
-            if qtd < 0:
-                aloy.acabou_flecha()
-                break
-
-            dano, foi_critico = maquinas[unidade_alvo].dano(
-                parte_alvo, coordenada, flecha_usada
-            )
-
-            if foi_critico:
-                if unidade_alvo in criticos.keys():
-                    if coordenada in criticos[unidade_alvo].keys():
-                        criticos[unidade_alvo][coordenada] += 1
-                    else:
-                        criticos[unidade_alvo][coordenada] = 1
-                else:
-                    criticos[unidade_alvo] = {}
-                    criticos[unidade_alvo][coordenada] = 1
-
-            if maquinas[unidade_alvo].pts_vida <= 0:
-                print(f"Máquina {unidade_alvo} derrotada")
-
-            if not tem_maquinas_vivas():
-                break
-
-            if interator % 3 == 0:
-                dano = get_dano_total()
-
-                aloy.pts_vida = max(aloy.pts_vida - dano, 0)
-
-            if aloy.pts_vida <= 0:
-                aloy.morreu()
-                break
-
-            if not aloy.tem_flechas():
-                aloy.acabou_flecha()
-                break
+        criticos: dict[int, dict[tuple[int, int], int]] = combate(aloy)
 
         print(f"Vida após o combate = {aloy.pts_vida}")
 
@@ -281,10 +296,16 @@ def main() -> None:
 
             if len(criticos) > 0:
                 print("Críticos acertados:")
+
                 for k in sorted(criticos.keys()):
                     print(f"Máquina {k}:")
-                    for w in criticos[k].keys():
-                        print(f"- {w}: {criticos[k][w]}x")
+
+                    items_list = [item for item in criticos[k].items()]
+                    items_list = sorted(
+                        items_list, key=lambda x: x[1]["parte"])
+
+                    for w in items_list:
+                        print(f"- {w[0]}: {w[1]['qtd']}x")
 
         aloy.coletar_flechas()
         aloy.cura()
