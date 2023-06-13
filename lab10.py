@@ -1,14 +1,18 @@
 from dataclasses import dataclass
+from math import floor
 
 
 class Flecha:
     def __init__(self, tipo: str, quantidade: int) -> None:
         self.tipo: str = tipo
-        self.quatidade: int = quantidade
+        self.quantidade: int = quantidade
         self.quantidade_inicial: int = quantidade
 
     def resetar_quantidade(self):
-        self.quatidade = self.quantidade_inicial
+        self.quantidade = self.quantidade_inicial
+
+    def foi_gasta(self) -> bool:
+        return not self.quantidade == self.quantidade_inicial
 
 
 @dataclass
@@ -30,7 +34,7 @@ class Maquina:
         self.pts_vida: int = pts_vida
         self.pts_ataque: int = pts_ataque
         self.num_partes: int = num_partes
-        self.partes: dict[str, Parte] = partes
+        self.partes: dict[str, Parte] = partes.copy()
 
     def adicionar_parte(self, nome, fraqueza, dano_maximo, coordenadas) -> None:
         self.partes[nome] = Parte(
@@ -50,16 +54,29 @@ class Maquina:
     def dano(
         self, parte: str, coordenada: tuple[int, int], tipo: str
     ) -> tuple[int, bool]:
-        dano = self.partes[parte].dano_maximo - (
-            abs(self.partes[parte].coordenadas[0] - coordenada[0])
-            + abs(self.partes[parte].coordenadas[1] - coordenada[1])
+        dano = max(
+            self.partes[parte].dano_maximo
+            - (
+                abs(self.partes[parte].coordenadas[0] - coordenada[0])
+                + abs(self.partes[parte].coordenadas[1] - coordenada[1])
+            ),
+            0,
         )
-        if tipo == parte:
-            self.pts_vida -= dano
-            return dano, dano == self.partes[parte].dano_maximo
+
+        if (
+            tipo == self.partes[parte].fraqueza
+            or self.partes[parte].fraqueza == "todas"
+        ):
+            self.pts_vida = max(self.pts_vida - dano, 0)
+
+            return dano, self.partes[parte].coordenadas == coordenada
         else:
-            self.pts_vida -= dano // 2
-            return dano // 2, 0
+            self.pts_vida = max(self.pts_vida - (dano // 2), 0)
+
+            return dano // 2, self.partes[parte].coordenadas == coordenada
+
+    def get_fraqueza(self, parte: str) -> str:
+        return self.partes[parte].fraqueza
 
 
 class Player:
@@ -67,7 +84,9 @@ class Player:
         self, pts_vida: int, flechas: dict[Flecha] = {}, string_to_parse: str = ""
     ) -> None:
         self.pts_vida: int = pts_vida
+        self.max_vida: int = pts_vida
         self.flechas: dict[Flecha] = flechas
+        self.estado: int = 0
 
         if string_to_parse:
             self.parse_flechas_by_string(string_to_parse)
@@ -83,8 +102,68 @@ class Player:
         for flecha in self.flechas.keys():
             self.flechas[flecha].resetar_quantidade()
 
+    def usar_flecha(self, tipo: str) -> int:
+        self.flechas[tipo].quantidade -= 1
+
+        return self.flechas[tipo].quantidade
+
+    def cura(self) -> None:
+        self.pts_vida = min(
+            self.pts_vida + floor(0.5 * self.max_vida), self.max_vida)
+
+    def coletar_flechas(self) -> None:
+        for i in self.flechas.keys():
+            self.flechas[i].resetar_quantidade()
+
+    def acabou_flecha(self) -> None:
+        self.estado = 2
+
+    def sem_flechas(self) -> bool:
+        return self.estado == 2
+
+    def morta(self) -> bool:
+        return self.estado == 1
+
+    def morreu(self) -> None:
+        self.estado = 1
+
+    def print_flechas_gastas(self):
+        for i in self.flechas.keys():
+            if self.flechas[i].foi_gasta():
+                print(
+                    f"- {self.flechas[i].tipo}: {self.flechas[i].quantidade_inicial - self.flechas[i].quantidade}/{self.flechas[i].quantidade_inicial}"
+                )
+
+    def tem_flechas(self) -> bool:
+        for i in self.flechas.keys():
+            if self.flechas[i].quantidade > 0:
+                return True
+        return False
+
 
 maquinas: list[Maquina] = []
+
+
+def tem_maquinas_vivas() -> bool:
+    global maquinas
+
+    for i in maquinas:
+        if i.pts_vida > 0:
+            return True
+
+    return False
+
+
+def get_dano_total() -> int:
+    global maquinas
+
+    dano: int = 0
+
+    for i in maquinas:
+        if i.pts_vida > 0:
+            dano += i.pts_ataque
+
+    return dano
 
 
 def main() -> None:
@@ -96,46 +175,122 @@ def main() -> None:
 
     num_maquinas: int = int(input())
 
-    num_maquinas_combate: int = int(input())
-
-    for i in range(num_maquinas_combate):
-        v, p, q = list(map(int, input().split()))
-
-        maquinas.append(Maquina(pts_vida=v, pts_ataque=p, num_partes=q))
-
-        for _ in range(q):
-            nome_parte, fraqueza, dano_maximo, cx, cy = input().split(",")
-
-            coordenadas: tuple[int, int] = (int(cx.strip()), int(cy.strip()))
-
-            maquinas[i].adicionar_parte_by_object(
-                Parte(
-                    nome=nome_parte,
-                    fraqueza=fraqueza,
-                    dano_maximo=dano_maximo,
-                    coordenadas=coordenadas,
-                )
-            )
-
     indice: int = 0
 
-    while True:
-        informarcoes_ataque = input().split(",")
+    while num_maquinas:
+        maquinas.clear()
 
-        indice += 1
+        criticos: dict[int, dict[tuple[int, int], int]] = {}
+        # Lendo as maquinas
+        num_maquinas_combate: int = int(input())
 
-        unidade_alvo = int(informarcoes_ataque[0])
-        parte_alvo = informarcoes_ataque[1]
-        coordenada = (informarcoes_ataque[2], informarcoes_ataque[3])
+        num_maquinas -= num_maquinas_combate
+
+        for i in range(num_maquinas_combate):
+            v, p, q = list(map(int, input().split()))
+
+            maquinas.append(Maquina(pts_vida=v, pts_ataque=p, num_partes=q))
+
+            for _ in range(q):
+                nome_parte, fraqueza, dano_maximo, cx, cy = input().split(",")
+
+                coordenadas: tuple[int, int] = (
+                    int(cx.strip()), int(cy.strip()))
+
+                maquinas[i].adicionar_parte_by_object(
+                    Parte(
+                        nome=nome_parte.strip(),
+                        fraqueza=fraqueza.strip(),
+                        dano_maximo=int(dano_maximo.strip()),
+                        coordenadas=coordenadas,
+                    )
+                )
+
+        # Hora do combate
+
+        interator: int = 0
 
         print(f"Combate {indice}, vida = {aloy.pts_vida}")
 
-        dano, foi_critico = maquinas[unidade_alvo].dano(parte_alvo, coordenada)
+        indice += 1
 
-        if maquinas[unidade_alvo].pts_vida <= 0:
-            print(f"Maquina {unidade_alvo} derrotada")
+        while True:
+            # print("carai")
+            interator += 1
+
+            informarcoes_ataque = input().split(",")
+
+            unidade_alvo = int(informarcoes_ataque[0].strip())
+            parte_alvo = informarcoes_ataque[1].strip()
+            flecha_usada = informarcoes_ataque[2].strip()
+            coordenada = (
+                int(informarcoes_ataque[3].strip()),
+                int(informarcoes_ataque[4].strip()),
+            )
+
+            qtd = aloy.usar_flecha(flecha_usada)
+
+            if qtd < 0:
+                aloy.acabou_flecha()
+                break
+
+            dano, foi_critico = maquinas[unidade_alvo].dano(
+                parte_alvo, coordenada, flecha_usada
+            )
+
+            if foi_critico:
+                if unidade_alvo in criticos.keys():
+                    if coordenada in criticos[unidade_alvo].keys():
+                        criticos[unidade_alvo][coordenada] += 1
+                    else:
+                        criticos[unidade_alvo][coordenada] = 1
+                else:
+                    criticos[unidade_alvo] = {}
+                    criticos[unidade_alvo][coordenada] = 1
+
+            if maquinas[unidade_alvo].pts_vida <= 0:
+                print(f"Máquina {unidade_alvo} derrotada")
+
+            if not tem_maquinas_vivas():
+                break
+
+            if interator % 3 == 0:
+                dano = get_dano_total()
+
+                aloy.pts_vida = max(aloy.pts_vida - dano, 0)
+
+            if aloy.pts_vida <= 0:
+                aloy.morreu()
+                break
+
+            if not aloy.tem_flechas():
+                aloy.acabou_flecha()
+                break
 
         print(f"Vida após o combate = {aloy.pts_vida}")
+
+        if aloy.morta():
+            print("Aloy foi derrotada em combate e não retornará a tribo.")
+            break
+        elif aloy.sem_flechas():
+            print("Aloy ficou sem flechas e recomeçará sua missão mais preparada.")
+            break
+        else:
+            print("Flechas utilizadas:")
+            aloy.print_flechas_gastas()
+
+            if len(criticos) > 0:
+                print("Críticos acertados:")
+                for k in sorted(criticos.keys()):
+                    print(f"Máquina {k}:")
+                    for w in criticos[k].keys():
+                        print(f"- {w}: {criticos[k][w]}x")
+
+        aloy.coletar_flechas()
+        aloy.cura()
+
+    if not aloy.morta() and not aloy.sem_flechas():
+        print("Aloy provou seu valor e voltou para sua tribo.")
 
 
 if __name__ == "__main__":
