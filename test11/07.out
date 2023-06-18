@@ -1,0 +1,221 @@
+. . . * . d P
+U . d d L . .
+R . v . . . .
+R . v v . . .
+L . . . . d .
+D . v . . . .
+. . . . . . .
+
+U . L * . d .
+. . d L . . P
+. R v . . . .
+. R v v . . .
+L . . . . d .
+. . v . . . .
+D . . . . . .
+
+U L . * . d .
+. . L d . . .
+. . R . . . P
+. . R v . . .
+L . . . . d .
+. . v . . . .
+D . . . . . .
+
+L . . * . d .
+. L d d . . .
+. . v R . . .
+. . v R . . P
+L . . . . d .
+. . v . . . .
+D . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . R . .
+. . v v R . .
+L . . . . d P
+. . v . . . .
+D . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . R .
+. . v v . R .
+L . . . . d .
+. . v . . . P
+D . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+D . . . . . P
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+D . . . . P .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+D . . . P . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+D . . P . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+D . P . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+D P . . . . .
+
+O Personagem deu 5 de dano ao monstro na posicao (6, 0)
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . v . . . .
+P . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+P . v . . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. P v . . . .
+. . . . . . .
+
+[v]Personagem adquiriu o objeto chocolate com status de 5
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . P . . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . . P . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . . . P . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . . . . P .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d .
+. . . . . . P
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . d P
+. . . . . . .
+. . . . . . .
+
+[d]Personagem adquiriu o objeto colar com status de 10
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . . P .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . . P . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . . P . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L . P . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+L P . . . . .
+. . . . . . .
+. . . . . . .
+
+O Personagem deu 20 de dano ao monstro na posicao (4, 0)
+O Monstro deu 10 de dano ao Personagem. Vida restante = 0
+L . . * . d .
+L . d d . . .
+. . v . . . R
+. . v v . . R
+X . . . . . .
+. . . . . . .
+. . . . . . .
+

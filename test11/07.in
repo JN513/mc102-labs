@@ -1,0 +1,21 @@
+5 10
+7 7
+0,6
+0,3
+7
+100 50 U 1,0
+110 50 R 2,0
+100 50 R 3,0
+100 50 L 4,0
+5 5 D 5,0
+10 5 L 1,4
+100 5 L 0,3
+8
+joia d 1,2 -1
+chocolate v 2,2 5
+carne v 3,2 10
+chocolate v 5,2 5
+espada d 1,3 5
+colar d 4,5 10
+veneno v 3,3 -10
+garrafa d 0,5 -20

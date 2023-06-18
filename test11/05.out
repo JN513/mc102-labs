@@ -1,0 +1,28 @@
+. . P * . . .
+D . d . L . .
+R . v . . . .
+R . . . . . .
+. . . . . . .
+R . . . . . .
+. . . . . . .
+
+[d]Personagem adquiriu o objeto maldicao com status de -100
+. . L * . . .
+. . P L . . .
+D R v . . . .
+. R . . . . .
+. . . . . . .
+. R . . . . .
+. . . . . . .
+
+[v]Personagem adquiriu o objeto chocolate com status de 5
+O Personagem deu 1 de dano ao monstro na posicao (2, 2)
+O Monstro deu 55 de dano ao Personagem. Vida restante = 0
+. L . * . . .
+. . L . . . .
+. . X . . . .
+D . R . . . .
+. . . . . . .
+. . R . . . .
+. . . . . . .
+

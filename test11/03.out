@@ -1,0 +1,44 @@
+. P . . *
+U . d . .
+L . v . .
+
+U . . . *
+. P d . .
+L . v . .
+
+U . . . *
+. . d . .
+L P v . .
+
+O Personagem deu 10 de dano ao monstro na posicao (2, 0)
+O Monstro deu 2 de dano ao Personagem. Vida restante = 498
+U . . . *
+. . d . .
+P . v . .
+
+U . . . *
+P . d . .
+L . v . .
+
+U . . . *
+. P d . .
+L . v . .
+
+[d]Personagem adquiriu o objeto joia com status de 20
+U . . . *
+. . P . .
+L . v . .
+
+U . . . *
+. . . P .
+L . v . .
+
+U . . . *
+. . . . P
+L . v . .
+
+U . . . P
+. . . . .
+L . v . .
+
+Chegou ao fim!

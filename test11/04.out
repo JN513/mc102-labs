@@ -1,0 +1,403 @@
+. . P * . d .
+U . d d L . .
+R . v . . . .
+R . v v . . .
+L . . . . d .
+D . v . . . .
+. . . . . . .
+
+[d]Personagem adquiriu o objeto joia com status de -1
+U . L * . d .
+. . P L . . .
+. R v . . . .
+. R v v . . .
+L . . . . d .
+. . v . . . .
+D . . . . . .
+
+[v]Personagem adquiriu o objeto chocolate com status de 5
+O Personagem deu 9 de dano ao monstro na posicao (2, 2)
+O Monstro deu 5 de dano ao Personagem. Vida restante = 50
+U L . * . d .
+. . L d . . .
+. . P . . . .
+. . R v . . .
+L . . . . d .
+. . v . . . .
+D . . . . . .
+
+[v]Personagem adquiriu o objeto carne com status de 10
+L . . * . d .
+. L . d . . .
+. . . R . . .
+. . P R . . .
+L . . . . d .
+. . v . . . .
+D . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . R . .
+. . . v R . .
+L . P . . d .
+. . v . . . .
+D . . . . . .
+
+[v]Personagem adquiriu o objeto chocolate com status de 5
+L . . * . d .
+L . . d . . .
+. . . . . R .
+. . . v . R .
+L . . . . d .
+. . P . . . .
+D . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . . . . .
+D . P . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . . . . .
+D P . . . . .
+
+O Personagem deu 5 de dano ao monstro na posicao (6, 0)
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . . . . .
+P . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+P . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. P . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . P . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . P . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . . P . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . . . P .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d .
+. . . . . . P
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . d P
+. . . . . . .
+. . . . . . .
+
+[d]Personagem adquiriu o objeto colar com status de 10
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . . P .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . . P . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . . P . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L . P . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+L P . . . . .
+. . . . . . .
+. . . . . . .
+
+O Personagem deu 19 de dano ao monstro na posicao (4, 0)
+O Monstro deu 5 de dano ao Personagem. Vida restante = 60
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . v . . R
+P . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+P . . v . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. P . v . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . P v . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+[v]Personagem adquiriu o objeto veneno com status de -10
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . P . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . . P . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . . . P R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+O Personagem deu 19 de dano ao monstro na posicao (3, 6)
+O Monstro deu 5 de dano ao Personagem. Vida restante = 45
+L . . * . d .
+L . . d . . .
+. . . . . . R
+. . . . . . P
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+O Personagem deu 19 de dano ao monstro na posicao (2, 6)
+O Monstro deu 5 de dano ao Personagem. Vida restante = 40
+L . . * . d .
+L . . d . . .
+. . . . . . P
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . . P R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . . P . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . . P . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. . P . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+. P . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+L . . d . . .
+P . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+O Personagem deu 10 de dano ao monstro na posicao (1, 0)
+L . . * . d .
+P . . d . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+. P . d . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+. . P d . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+[d]Personagem adquiriu o objeto espada com status de 5
+L . . * . d .
+. . . P . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+. . . . P . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+. . . . . P .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d .
+. . . . . . P
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * . d P
+. . . . . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+[d]Personagem adquiriu o objeto garrafa com status de -20
+L . . * . P .
+. . . . . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . * P . .
+. . . . . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+L . . P . . .
+. . . . . . .
+. . . . . . R
+. . . . . . R
+L . . . . . .
+. . . . . . .
+. . . . . . .
+
+Chegou ao fim!

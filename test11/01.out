@@ -1,0 +1,32 @@
+. P . *
+U . d .
+R . v .
+R . . .
+
+U . . *
+. P d .
+. R v .
+. R . .
+
+U . . *
+. . d .
+. P R .
+. . R .
+
+U . . *
+. . d .
+. . v R
+. P . R
+
+U . . *
+. . d .
+. . v R
+. . P R
+
+O Personagem deu 10 de dano ao monstro na posicao (3, 3)
+O Monstro deu 5 de dano ao Personagem. Vida restante = 0
+U . . *
+. . d .
+. . v R
+. . . X
+

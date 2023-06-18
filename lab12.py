@@ -38,30 +38,28 @@ def mergeSort(
     return vetor
 
 
-def binarySearch(vetor: list[int], item: Any, inicio: int = 0, fim: int = None) -> int:
-    fim = len(vetor) if fim is None else fim
-    meio: int = inicio + (fim - inicio) // 2
-
-    print(f"meio: {meio}, li {vetor}, ini {inicio}, fi: {fim}")
-
-    if inicio > fim:
-        return -1
-
-    if vetor[meio] == item:
-        return meio
-
-    else:
-        if vetor[meio] > item:
-            return binarySearch(vetor, item, inicio=inicio, fim=meio)
-
+def binarySearch(vetor: list[int], item: Any) -> int:
+    inicio = 0
+    fim = len(vetor) - 1
+    ok = False
+    while inicio <= fim:
+        meio: int = (inicio + fim) // 2
+        if vetor[meio] == item:
+            return meio
         elif vetor[meio] < item:
-            return binarySearch(vetor, item, inicio=meio, fim=fim)
+            inicio = meio + 1
+        elif vetor[meio] > item:
+            fim = meio - 1
 
     return -1
 
 
 # l = [(10, 2), (2, 10), (2, 5), (5, 2), (8, 9), (9, 8), (10, 1)]
 # print(mergeSort(l, lambda x, y: x[1] < y[1]))
+
+l = [1, 2, 3, 4, 5, 6, 7, 9, 10]
+
+print(binarySearch(l, 9))
 
 
 class Jogador:
